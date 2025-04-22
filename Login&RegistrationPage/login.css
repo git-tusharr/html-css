@@ -1,0 +1,32 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 70vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: rgb(red, green, blue);
+}
+.login {
+    background-color: aliceblue;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+    width: 300px;
+  }
+
+  .login input[type="submit"]
+  .login input[type="text"]
+  .login input[type="password"]{
+    width: 100%
+    ;
+  }
+
+
+
+  
+
