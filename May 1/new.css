@@ -1,0 +1,19 @@
+body{
+    background-color: red;
+}
+
+/* Tablet view */
+@media  and(max-width:768px) {
+    body{
+        background-color: yellow;
+    }
+    
+}
+
+/* mobile view */
+@media  and (max-width:425px) {
+    body{
+        background-color: blue;
+    }
+    
+}

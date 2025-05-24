@@ -1,0 +1,28 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-property: all;
+    transition-duration: 3s;
+    /* linear,ease,ease in,ease out */
+    transition-timing-function: ease-in-out;
+    transition-delay: 2s;
+
+    /* shorthand */
+    transition: all 3s ease;
+}
+
+
+.box:hover{
+    /* transform: translateX(100px); */
+    /* transform: translateY(100px); */
+    /* transform: rotate(360deg); */
+    transform: scaleX(3);
+    transform: scaleY(3);
+    transform: scale(2,3);
+    transform: skewX(30deg);
+    transform: skewY(30deg);
+    transform: skew(30deg,40deg);
+    background-color: yellow;
+
+}

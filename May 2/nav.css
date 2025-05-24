@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar h1 {
+  margin-left: 40px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: aqua;
+}
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  font-size: 23px;
+  list-style: none;
+  margin-right: 40px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  margin-right: 30px;
+  font-size: 30px;
+  display: none;
+}
+
+/* tablet view */
+@media screen and (max-width: 769px) {
+  .logo {
+    display: block;
+  }
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  #click:checked ~ .nav2 nav ul {
+    display: block;
+  }
+}

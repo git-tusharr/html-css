@@ -1,0 +1,68 @@
+/* Nested Selector */
+.main div h1
+{
+    background-color: red;
+    color: white;
+    font-family: cursive;
+    font-weight: 900;
+}
+.main p
+{
+   
+    font-weight: 900;
+    text-align: justify;
+    /* Capatalise,Lowercase,uppercase */
+    text-transform: uppercase; 
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    line-height: 30px;
+
+}
+
+.head span
+{
+font-family: cursive;
+color: blue;
+}
+.head
+{
+font-style: normal;
+color:red;
+}
+
+p span
+{
+    background-color: yellow;
+}
+
+p
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color: blue;
+
+    /* shorthand */
+    /* border: 5px dashed blue; */
+    border-top: 5px dashed blue;
+    border-left: 5px dotted green;
+    border-bottom: 5px double orange;
+    border-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 40px;
+}
+
+.main
+{
+    background-image: url(https://plus.unsplash.com/premium_photo-1701628122752-419b7b09dc05?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: ;
+    background-position: ;
+    background-size: ;
+    height: ;
+
+    /* shorthand */
+background: url()no-repeat center center/center;
+    
+
+}
