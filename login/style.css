@@ -1,0 +1,21 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+   
+}
+.login{
+    display: flex;
+    border-radius: 20px;
+
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 400px;
+    height: 500px;
+     box-shadow: rgb(red, green, blue);
+
+}

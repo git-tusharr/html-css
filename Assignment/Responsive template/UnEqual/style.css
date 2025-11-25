@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f0f0f0;
+}
+
+.unequal-layout {
+  background: white;
+  border: 1px solid lightgray;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+header, footer {
+  background: lightgray;
+  padding: 10px;
+  text-align: center;
+  height: 80px;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.columns div{
+    background-color: lightgray;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+
+}
+
+.columns
+    {
+        
+        display: grid;
+        grid-template-columns: 0.5fr 5fr 0.5fr;
+        height: 300px;
+    }
+
+
