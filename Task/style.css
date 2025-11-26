@@ -1,24 +1,111 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-.navbar{
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: azure;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar nav ul{
+.navbar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
   color: azure;
-  height: px;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: 55px;
+}
+
+.logo span {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.navbar nav ul {
   display: flex;
   gap: 30px;
+  list-style: none;
+}
+
+.navbar nav ul li a {
   text-decoration: none;
+  color: azure;
+}
+
+.navbar nav ul li a:hover {
+  color: yellow;
+}
+
+.navbar .right-nav button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar .right-nav span button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 
+.home {
+  width: 100%;
+  height: 90vh;
+  background-image: url("Matias-Tailwind-CSS-Personal-Portfolio-Template.avif");
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .navbar nav ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 40px;
+    width: 45px;
+  }
+
+  .logo span {
+    font-size: 20px;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar .right-nav button,
+  .navbar .right-nav span button {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
 }
