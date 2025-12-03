@@ -1,17 +1,22 @@
-/* ===========================
-    COLOR PALETTE
-=========================== */
+/* ======================================
+    DARK MODE COLOR PALETTE
+====================================== */
 :root {
   --space-indigo: #22223b;
   --dusty-grape: #4a4e69;
   --lilac-ash: #9a8c98;
   --almond-silk: #c9ada7;
   --parchment: #f2e9e4;
+
+  --dark-bg: #0f0f17;
+  --dark-card: rgba(255, 255, 255, 0.05);
+  --neon-purple: #a78bfa;
+  --neon-pink: #ff7ce5;
 }
 
-/* ===========================
+/* ======================================
     GLOBAL STYLES
-=========================== */
+====================================== */
 * {
   margin: 0;
   padding: 0;
@@ -21,27 +26,29 @@
 }
 
 body {
-  background: var(--parchment);
-  color: var(--space-indigo);
+  background: var(--dark-bg);
+  color: var(--parchment);
 }
 
-/* Fade-in animation */
-.fade {
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+/* fade animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===========================
+section {
+  animation: fadeUp 0.8s ease forwards;
+  width: 85%;
+  margin: auto;
+  padding: 70px 0;
+}
+
+/* ======================================
     HERO SECTION
-=========================== */
+====================================== */
 header {
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 25px;
   background: linear-gradient(135deg, var(--space-indigo), var(--dusty-grape));
   color: #fff;
   border-bottom-left-radius: 80px;
@@ -50,177 +57,171 @@ header {
   overflow: hidden;
 }
 
-/* Subtle floating glow */
+/* Glowing gradient sphere */
 header::after {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 400px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50%;
-  top: -60px;
-  right: -60px;
-  animation: slowFloat 6s infinite ease-in-out alternate;
-}
-
-@keyframes slowFloat {
-  from { transform: translateY(0px); }
-  to { transform: translateY(20px); }
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent);
+  top: -90px;
+  right: -120px;
+  filter: blur(70px);
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--almond-silk);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border: 4px solid var(--almond-silk);
+  box-shadow: 0 0 25px rgba(255,255,255,0.15);
 }
 
 .name {
-  font-size: 2.6rem;
   margin-top: 15px;
-  letter-spacing: 1px;
+  font-size: 2.7rem;
+  font-weight: 700;
 }
 
 .tagline {
   font-size: 1.15rem;
   opacity: 0.95;
-  margin-top: 5px;
 }
 
-/* ===========================
-    NAVIGATION — Modern Animated
-=========================== */
+/* ======================================
+    NAVIGATION — minimal neon
+====================================== */
 .nav-links {
-  margin-top: 20px;
+  margin-top: 22px;
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 22px;
   flex-wrap: wrap;
-  gap: 18px;
 }
 
 .nav-links a {
-  color: #fff;
+  color: var(--parchment);
   text-decoration: none;
-  padding: 8px 10px;
   font-weight: 500;
   position: relative;
+  padding: 6px 4px;
+  transition: 0.25s;
 }
 
-/* Animated underline */
+/* neon underline */
 .nav-links a::after {
   content: "";
   position: absolute;
+  bottom: -4px;
   left: 0;
-  bottom: -3px;
   width: 0%;
   height: 2px;
-  background: var(--almond-silk);
-  transition: width 0.3s;
+  background: var(--neon-purple);
+  box-shadow: 0 0 8px var(--neon-purple);
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* ===========================
-    SECTION STYLE
-=========================== */
-section {
-  width: 85%;
-  margin: auto;
-  padding: 65px 0;
-  animation: fadeIn 1s;
-}
-
+/* ======================================
+    SECTION HEADINGS
+====================================== */
 h2 {
   text-align: center;
-  font-size: 2.2rem;
+  color: var(--almond-silk);
+  font-size: 2.3rem;
   margin-bottom: 30px;
-  color: var(--dusty-grape);
   position: relative;
 }
 
-/* Section Title Underline */
 h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
-  background: var(--almond-silk);
+  background: var(--neon-purple);
   margin: 10px auto 0;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--neon-purple);
 }
 
-/* ===========================
-    PROJECT CARDS — Premium Glass
-=========================== */
+/* ======================================
+    PROJECT CARDS — GLASSMORPHISM DARK
+====================================== */
 .project {
-  background: rgba(255,255,255,0.6);
+  background: var(--dark-card);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 5px solid var(--neon-purple);
   padding: 22px;
-  margin: 20px 0;
-  border-radius: 15px;
-  border-left: 6px solid var(--dusty-grape);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.project a {
-  color: var(--dusty-grape);
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 8px;
-  display: inline-block;
-}
-
-.project a:hover {
-  color: var(--space-indigo);
-}
-
-/* ===========================
-    MINI PROJECT LINKS
-=========================== */
-.mini-projects li {
-  margin: 10px 0;
-}
-
-.mini-projects a {
-  color: var(--dusty-grape);
-  font-weight: bold;
-  position: relative;
-}
-
-.mini-projects a:hover {
-  color: var(--space-indigo);
-}
-
-/* ===========================
-    CONTACT STYLING
-=========================== */
-#contact a {
-  color: var(--space-indigo);
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
+  margin: 25px 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
 
-#contact a:hover {
-  border-bottom: 2px solid var(--dusty-grape);
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55), 0 0 20px var(--neon-purple);
 }
 
-/* ===========================
-    RESPONSIVE DESIGN
-=========================== */
+.project h4 {
+  color: var(--parchment);
+  margin-bottom: 8px;
+}
+
+.project a {
+  display: inline-block;
+  color: var(--neon-purple);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 6px;
+  text-shadow: 0 0 8px var(--neon-purple);
+}
+
+.project a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ======================================
+    MINI PROJECT LINKS
+====================================== */
+.mini-projects a {
+  color: var(--neon-purple);
+  text-shadow: 0 0 6px var(--neon-purple);
+  font-weight: bold;
+}
+
+.mini-projects a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ======================================
+    CONTACT SECTION
+====================================== */
+#contact a {
+  color: var(--neon-purple);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+
+#contact a:hover {
+  border-bottom: 2px solid var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ======================================
+    RESPONSIVE
+====================================== */
 @media (max-width: 768px) {
-  .name { font-size: 2rem; }
-  .profile-pic { width: 120px; height: 120px; }
-  section { width: 92%; }
+  .name { font-size: 2.1rem; }
+  .profile-pic { width: 130px; height: 130px; }
+  section { width: 90%; }
 }
