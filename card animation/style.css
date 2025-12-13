@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at center, #111 0%, #000 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.scene {
+  width: 480px;
+  height: 480px;
+  perspective: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: spin 22s linear infinite;
+}
+
+
+.scene:hover .carousel {
+  animation-play-state: paused;
+}
+
+
+.carousel span {
+  position: absolute;
+  width: 220px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  backface-visibility: visible;
+}
+
+
+.carousel span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.85);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.carousel span:hover img {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.4),
+    0 0 22px rgba(0,153,255,0.7),
+    0 0 40px rgba(0,153,255,0.9),
+    0 30px 60px rgba(0,0,0,0.9);
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
